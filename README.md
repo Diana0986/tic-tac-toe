@@ -194,7 +194,7 @@ private void playerwin()
 ```c#
 private Button[,] buttons = new Button[3, 3];
 ```
-Для заполнения мы используем цикл for(записываем сразу после)
+Для заполнения мы используем цикл for(записываем после переменной "label1.Text")
 ```c#
 for (int i = 0; i < buttons.Length / 3; i++)
 {
