@@ -186,7 +186,7 @@ private void playerwin()
     * Location - 693; 222
     * Size - 160; 50
     * Text - Сброс процесса
-    * Front - Microsoft Sans Serif; 10,25pt.
+    * Font - Microsoft Sans Serif; 10,25pt.
   
 Нажимаем на эту кнопку два раза и переходим к коду
 
