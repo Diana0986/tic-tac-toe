@@ -112,54 +112,82 @@ private void playerwin()
 ```
 * Во-вторых мы используем оператор if который и вставим в новый метод:
 ```c#
-    if (buttons[0, 0].Text == buttons[0, 1].Text && buttons[0, 1].Text == buttons[0, 2].Text)
-    {
-        if (buttons[0, 0].Text != "")
-            MessageBox.Show("Вы победили!");
-        }
-        return;
-    }
-    if (buttons[1, 0].Text == buttons[1, 1].Text && buttons[1, 1].Text == buttons[1, 2].Text)
-    {
-        if (buttons[1, 0].Text != "")
-            MessageBox.Show("Вы победили!");
-    }
-    if (buttons[2, 0].Text == buttons[2, 1].Text && buttons[2, 1].Text == buttons[2, 2].Text)
-    {
-        if (buttons[2, 0].Text != "")
-            MessageBox.Show("Вы победили!");
-        return;
-    }
-    if (buttons[0, 0].Text == buttons[1, 0].Text && buttons[1, 0].Text == buttons[2, 0].Text)
-    {
-        if (buttons[0, 0].Text != "")
-            MessageBox.Show("Вы победили!");
-        return;
-    }
-    if (buttons[0, 1].Text == buttons[1, 1].Text && buttons[1, 1].Text == buttons[2, 1].Text)
-    {
-        if (buttons[0, 1].Text != "")
-            MessageBox.Show("Вы победили!");
-        return;
-    }
-    if (buttons[0, 2].Text == buttons[1, 2].Text && buttons[1, 2].Text == buttons[2, 2].Text)
-    {
-        if (buttons[0, 2].Text != "")
-            MessageBox.Show("Вы победили!");
-        return;
-    }
-    if (buttons[0, 0].Text == buttons[1, 1].Text && buttons[1, 1].Text == buttons[2, 2].Text)
-    {
-        if (buttons[0, 0].Text != "")
-            MessageBox.Show("Вы победили!");
-        return;
-    }
-    if (buttons[2, 0].Text == buttons[1, 1].Text && buttons[1, 1].Text == buttons[0, 2].Text)
-    {
-        if (buttons[2, 0].Text != "")
-            MessageBox.Show("Вы победили!");
-        return;
-    }
+        
+            if (buttons[0, 0].Text == buttons[0, 1].Text && buttons[0, 1].Text == buttons[0, 2].Text)
+            {
+                if (buttons[0, 0].Text != "")
+                {
+                    MessageBox.Show("Вы победили!");
+                    return;
+
+                }
+            }
+            if (buttons[1, 0].Text == buttons[1, 1].Text && buttons[1, 1].Text == buttons[1, 2].Text)
+            {
+                if (buttons[1, 0].Text != "")
+                {
+                    MessageBox.Show("Вы победили!");
+                    return;
+
+                }
+            }
+            if (buttons[2, 0].Text == buttons[2, 1].Text && buttons[2, 1].Text == buttons[2, 2].Text)
+            {
+                if (buttons[2, 0].Text != "")
+                {
+                    MessageBox.Show("Вы победили!");
+                    return;
+
+                }
+            }
+            if (buttons[0, 0].Text == buttons[1, 0].Text && buttons[1, 0].Text == buttons[2, 0].Text)
+            {
+                if (buttons[0, 0].Text != "")
+                {
+                    MessageBox.Show("Вы победили!");
+                    return;
+
+                }
+            }
+            if (buttons[0, 1].Text == buttons[1, 1].Text && buttons[1, 1].Text == buttons[2, 1].Text)
+            {
+                if (buttons[0, 1].Text != "")
+                {
+                    MessageBox.Show("Вы победили!");
+                    return;
+
+                }
+            }
+            if (buttons[0, 2].Text == buttons[1, 2].Text && buttons[1, 2].Text == buttons[2, 2].Text)
+            {
+                if (buttons[0, 2].Text != "")
+
+                {
+                    MessageBox.Show("Вы победили!");
+                    return;
+
+                }
+            }
+            if (buttons[0, 0].Text == buttons[1, 1].Text && buttons[1, 1].Text == buttons[2, 2].Text)
+            {
+                if (buttons[0, 0].Text != "")
+                {
+                    MessageBox.Show("Вы победили!");
+                    return;
+
+                }
+            }
+            if (buttons[2, 0].Text == buttons[1, 1].Text && buttons[1, 1].Text == buttons[0, 2].Text)
+            {
+                if (buttons[2, 0].Text != "")
+                {
+                    MessageBox.Show("Вы победили!");
+                    return;
+
+                }
+            }
+        
+
 ```
 
 Если вы посмотрите хорошо этот код то увидите квадратные скобки. Это мы так обозначили кнопки, а именно как элементы массива:
@@ -170,9 +198,15 @@ private void playerwin()
 |[2;0]|[2;1]|[2;2]|
     
 А сделали мы это на будущее так как потом мы создадим массив.
+После нужно вствавить перед "sender.GetType().GetProperty("Enabled").SetValue(sender, false);":
+```c#
+playerwin();
+```
 
-![image](https://github.com/Diana0986/tic-tac-toe/assets/158996710/4d7706bb-4008-46b6-bc5f-a553da3fbca2)
-![image](https://github.com/Diana0986/tic-tac-toe/assets/158996710/2b95ede1-e8e9-409b-ad8e-d7361843530c)
+![image](https://github.com/Diana0986/tic-tac-toe/assets/158996710/b5d6eddd-7f01-42f6-91fd-90c75f27f0ea)
+![image](https://github.com/Diana0986/tic-tac-toe/assets/158996710/664ff781-6ee7-48c7-bf9f-6bbae1d832ad)
+
+
 
 
 
@@ -205,7 +239,7 @@ for (int i = 0; i < buttons.Length / 3; i++)
    }
 }
 ```
-Цикл for будет создавать кнопку нужного размера на каждый элемент массива.
+Цикл for будет создавать кнопку нужного размера на каждый элемент массива. После цикла for нужно добавить setButtons();.
 
 * Мы создали новые кнопки теперь создадим функцию с помощью которой мы их расположим. После "public Form1()" нужно вставить :
 ```c#
